@@ -3,7 +3,7 @@
 Project: Chromium Throne Excavation  
 State owner: Adam under Drew Clarke's authority  
 Delivery surface: public GitHub repository `Valar05/chromium-throne-excavation`  
-Status: DOCUMENTED / QUARANTINED  
+Status: DELIVERED / DOCUMENTED / QUARANTINED  
 Updated: 2026-08-31  
 License posture: no license granted
 
@@ -17,7 +17,7 @@ License posture: no license granted
 
 **Evidence standard:** Public source links plus capability-state labels. Repository source proves implementation only. It does not prove installation, runtime callability, delivery, or acceptance.
 
-**Delivery:** This public documentation repository and verified GitHub readback.
+**Delivery:** Public GitHub repository, verified by Home Center readback.
 
 ## Recovered identity
 
@@ -50,7 +50,7 @@ The earliest recovered source name is **Browser Porch**. **Chromium Throne** bec
 | Callable end to end | Not proven |
 | Delivered as working system | Not proven |
 | Human accepted | No evidence; current ruling rejects reuse |
-| Excavation documentation delivered | Pending GitHub readback |
+| Excavation documentation delivered | Yes; public GitHub readback verified |
 | Reuse authorized | No |
 
 ## Sealed decisions
@@ -62,16 +62,19 @@ The earliest recovered source name is **Browser Porch**. **Chromium Throne** bec
 5. Later phone-swarm integrations are adjacent layers, not proof that the core desktop body worked.
 6. Parallel-worker and single-persistent-worker descriptions are preserved as chronology, not flattened into one stable architecture.
 
-## Active gate
+## Verification receipt
 
-Read back `README.md`, `EVIDENCE.md`, and this file from public GitHub. Confirm:
-
-- repository visibility is public;
-- quarantine language is present;
-- no runnable implementation or secret is present;
-- public source links resolve;
-- capability claims do not exceed evidence.
+- Repository: `Valar05/chromium-throne-excavation`
+- Visibility: public (`private: false`)
+- Default branch: `main`
+- README SHA: `8c3be7c9db552fdb88a0cba3cb52bf1eaa719199`
+- Evidence SHA: `8f46df3eaef18361ffb67cce7c90136d78fb1648`
+- Initial state SHA: `0bab689028ddc2c9a200fe8357ebe2358c6fbce6`
+- Quarantine banner: verified
+- Runnable implementation or secret copied: no
+- Public source routes: present
+- Capability-state distinctions: present
 
 ## Stop condition
 
-Stop after verified public GitHub readback. Any implementation, revival, extraction of runnable code, or reuse proposal requires a new explicit commission from Drew and is outside this project.
+Met. Any implementation, revival, extraction of runnable code, or reuse proposal requires a new explicit commission from Drew and is outside this project.
