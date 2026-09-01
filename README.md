@@ -1,82 +1,56 @@
-# Chromium Throne — Excavation Record
+# Chromium Throne / Browser / Phone / Vlad Graveyard
 
-> **HISTORICAL / QUARANTINED / DO NOT REUSE**
->
-> This public repository documents what Chromium Throne was. It is not the Chromium Throne source repository, not an installer, not a revival project, and not a recommendation to reuse its architecture.
+**Classification:** public archaeological documentation  
+**System family:** Fortress Online / Home Center  
+**Disposition:** retired, incomplete, or unaccepted mechanisms preserved for excavation  
+**Reuse status:** **NO REUSE**
 
-## Plain answer
+This is a documentation graveyard, not a distributable application and not a source-code transplant. It identifies what the browser and phone automation pieces were, how they related, what source artifacts existed, and what remained unproved. It deliberately excludes executable copies, credentials, bearer tokens, private endpoints, device identifiers, and instructions that would revive the system.
 
-Chromium Throne was a **composite browser-orchestration lane** embedded inside the much larger [`Valar05/home-center`](https://github.com/Valar05/home-center) repository under the older name **Browser Porch**.
+## The short answer
 
-It was not one thing:
+Chromium Throne was not one clean product. The name covered a desktop ChatGPT browser-control stack built from a Chromium extension, a localhost relay, a client, a dedicated Chromium profile, queue/state logic, and installer/runtime scaffolding. It lived beside—but was not identical to—Browser Nerve, Computer Hands, Android Chromium control, Phone Hands, the Android operator overlay, Atom, Venice, and Vlad.
 
-1. a Manifest V3 Chromium extension named **Chromium Throne**;
-2. a side-panel interface and service worker;
-3. scripts injected into visible, authenticated `chatgpt.com` tabs;
-4. a local Node relay on `127.0.0.1:9234`;
-5. a CLI client that submitted commands to that relay;
-6. a dedicated Chromium profile and launcher;
-7. scheduled-task/watchdog machinery intended to keep the relay and browser alive;
-8. later phone/Termux/SSH adapters that treated the desktop lane as remote “muscle.”
+Vlad belongs to the phone/control plane. Vlad was a long-running synchronization and Judgment Jar access daemon used by Atom and campaign/review paths. Vlad did not drive Chromium tabs or Android taps directly. Treating Vlad as “part of it” is correct at the Fortress-system level; treating Vlad as the Chromium Throne extension is not.
 
-Calling it “a browser plugin” is incomplete. Calling it “orchestration” is also incomplete. It was a browser extension wrapped in a local control plane, persistence machinery, and campaign doctrine.
+## Repository map
 
-## Identity card
-
-| Field | Finding |
+| Path | Purpose |
 |---|---|
-| Canonical name | Chromium Throne |
-| Earlier/source name | Browser Porch |
-| Original home | `Valar05/home-center/browser-porch/` |
-| Standalone repository | None found before this excavation repository |
-| Browser surface | Chromium/Chrome/Edge extension side panel |
-| Worker surface | Visible authenticated ChatGPT tabs |
-| Local transport | Node loopback relay at `http://127.0.0.1:9234/v1/throne` |
-| Browser identity | Dedicated Chromium profile |
-| Compute doctrine | ChatGPT Pro reasoning in visible tabs; no API-token substitute |
-| Runtime persistence | Scheduled tasks/watchdogs and restart logic |
-| Proven state | Repository source existed |
-| Unproven state | Deployment, callability, end-to-end execution, and human acceptance |
-| Current ruling | Historical documentation only; do not reuse |
+| `README.md` | Scope, classification, and first orientation |
+| `docs/SYSTEM_ARCHITECTURE.md` | Whole-system boundaries, topology, states, and claims |
+| `docs/BROWSER_AUTOMATION.md` | Chromium Throne, Browser Porch, Browser Nerve, Computer Hands, Android Chromium |
+| `docs/PHONE_AUTOMATION.md` | Phone Hands, Termux, relay, overlay, Shizuku/rish, SSH, campaign machinery |
+| `docs/VLAD.md` | Vlad daemon, Atom/Judgment Jar linkage, receipts, gates, and limits |
+| `evidence/SOURCE_INVENTORY.md` | Source-path inventory, observed hashes, provenance, and acceptance gaps |
+| `state.md` | Excavation state and stop condition |
 
-## Architecture recovered
+## Status vocabulary
 
-```mermaid
-flowchart TD
-    A["Operator / later phone adapter"] --> B["throne-client.mjs"]
-    B --> C["Local Node relay :9234"]
-    C --> D["Chromium MV3 extension"]
-    D --> E["Side panel + service worker"]
-    E --> F["Visible ChatGPT tab"]
-    G["Dedicated browser profile"] --> D
-    H["Scheduled tasks / watchdog"] --> C
-    H --> G
-```
+The excavation never treats one stage as proof of the next:
 
-The architecture changed while it was being built. Some evidence describes service-worker-owned parallel visible workers; the later `0.7.0` contract narrows the system to one persistent Pro conversation with explicit recovery-only rotation. That is evolution evidence, not proof of a stable accepted product.
+1. **Present in source** — a file or declaration exists.
+2. **Installed** — artifacts were copied to an execution environment.
+3. **Wired** — endpoints, queues, tasks, or capabilities were connected.
+4. **Deployed** — the relevant runtime revision was actually serving.
+5. **Executed** — a command ran on the intended target.
+6. **Receipted** — an independently readable result was recorded.
+7. **Accepted** — the named end-to-end test passed under the intended conditions.
 
-## Why this is quarantined
+No source file, installer message, queue acceptance, heartbeat, or passing unit test is silently upgraded to end-to-end acceptance.
 
-- Chromium Throne never earned runtime acceptance.
-- Source-level contracts and fixtures were repeatedly confused with deployment evidence.
-- CI/workflow records around August 13–14, 2026 repeatedly failed.
-- The lane accumulated extension code, relay code, browser-profile state, authentication assumptions, scheduled tasks, watchdogs, phone adapters, SSH routing, and project doctrine in one organism.
-- The current commission explicitly preserves it for excavation, **not reuse**.
+## Public mirror and authority
 
-This repository deliberately contains no source transplant, extension package, installer, capability token, cookie, browser profile, scheduled-task command, or runnable resurrection path.
+The outward mirror is [Valar05/chromium-throne-excavation](https://github.com/Valar05/chromium-throne-excavation). The graveyard copy in Fortress Online Home Center Drive is the archival package requested by Drew. The historical implementation source remains in [Valar05/home-center](https://github.com/Valar05/home-center); this graveyard links to it without copying runnable implementation.
 
-## Excavation map
+## Non-goals
 
-- [Evidence ledger](./EVIDENCE.md) — supported facts, uncertainty, source routes, and archaeology questions.
-- [Project state](./state.md) — commission locks, capability state, and the exact stop condition.
+- No installation or activation procedure.
+- No copied extension package, relay, daemon, APK, shell script, or automation payload.
+- No promise that any worker, phone, browser, daemon, queue, or endpoint is currently live.
+- No licensing grant. Historical source remains governed by its own repository and history.
+- No cleanup of contradictions by invention. Intention, implementation, deployment, and acceptance remain separate.
 
-## Primary public source routes
+## Bottom line
 
-- [Browser Porch / Chromium Throne README](https://github.com/Valar05/home-center/blob/main/browser-porch/README.md)
-- [Extension manifest](https://github.com/Valar05/home-center/blob/main/browser-porch/extension/manifest.json)
-- [Phone swarm integration attempt, PR #268](https://github.com/Valar05/home-center/pull/268)
-- [Original containing repository](https://github.com/Valar05/home-center)
-
-## Reuse boundary
-
-Public visibility does not grant a license. No license is offered by this repository. The documentation may be read and cited as historical evidence; the Chromium Throne architecture and code are not being offered for reuse here.
+The recovered architecture was a collection of cooperating control planes. Chromium Throne automated a dedicated desktop ChatGPT browser. Browser Nerve handled CDP-style browser tickets. Computer Hands was the broader workstation body. Phone Hands carried commands to Android and Termux. The overlay guarded screen-touch authority. Android Chromium control operated phone Chrome separately. Atom provided a phone-local command/intelligence aperture. Vlad synchronized fast Judgment Jar context and receipts. Venice and review gates participated in continuation and acceptance. The pieces formed a Fortress automation organism, but the surviving evidence does not prove that the complete organism reached stable end-to-end acceptance.
